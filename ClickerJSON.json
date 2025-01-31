@@ -3,7 +3,7 @@
     {
       "name": "totalMoney",
       "type": "number",
-      "value": 1
+      "value": 0
     },
     {
       "name": "autoClickMultiplier",
@@ -18,7 +18,7 @@
     {
       "name": "workAmount",
       "type": "number",
-      "value": 0.05
+      "value": 0.01
     },
     {
       "name": "upgradeCost",
