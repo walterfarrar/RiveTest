@@ -161,6 +161,12 @@
               "variableName": "workAmount"
             },
             {
+              "action": "setTextRunValue",
+              "targetName": "UpgradeAmountTextField",
+              "formatString": "$${value}",
+              "variableName": "workAmountIncrease"
+            },
+            {
               "action": "callFunction",
               "functionName": "updateMoneyDisplay"
             },
