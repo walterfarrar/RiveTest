@@ -18,7 +18,7 @@
     {
       "name": "workAmount",
       "type": "number",
-      "value": 0.05
+      "value": 0.01
     },
     {
       "name": "upgradeCost",
