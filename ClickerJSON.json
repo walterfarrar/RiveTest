@@ -68,6 +68,27 @@
   ],
   "events": [
     {
+      "name": "OnBegin",
+      "type": "General",
+      "properties": [],
+      "logic": [
+        {
+          "action": "setTextRunValue",
+          "targetName": "MoneyTextField",
+          "formatString": "$${totalMoney}"
+        },
+        {
+          "action": "setTextRunValue",
+          "targetName": "UpgradeAmountTextField",
+          "formatString": "$${workAmountIncrease} ($${upgradeCost})"
+        },
+        {
+          "action": "callFunction",
+          "functionName": "updateUpgradeAvailability"
+        }
+      ]
+    },
+    {
       "name": "IncreaseMoney",
       "type": "General",
       "properties": [],
