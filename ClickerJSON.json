@@ -21,11 +21,6 @@
       "value": 0.05
     },
     {
-      "name": "workAmountUpgrade",
-      "type": "number",
-      "value": 1.1
-    },
-    {
       "name": "upgradeCost",
       "type": "number",
       "value": 1
@@ -33,7 +28,7 @@
     {
       "name": "workAmountIncrease",
       "type": "number",
-      "value": 0.01
+      "value": 1.1
     },
     {
       "name": "workAmountIncreaseMultiplier",
