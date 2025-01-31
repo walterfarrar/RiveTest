@@ -151,7 +151,7 @@
               "decimals": 2
             },
             {
-              "action": "add",
+              "action": "multiply",
               "target": "workAmount",
               "source": "workAmountIncrease"
             },
