@@ -1,0 +1,139 @@
+{
+  "variables": [
+    {
+      "name": "totalMoney",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "autoClickMultiplier",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "name": "autoTickInterval",
+      "type": "number",
+      "value": 1000
+    },
+    {
+      "name": "workAmount",
+      "type": "number",
+      "value": 0.01
+    },
+    {
+      "name": "workAmountUpgrade",
+      "type": "number",
+      "value": 0.01
+    },
+    {
+      "name": "upgradeCost",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "name": "workAmountIncrease",
+      "type": "number",
+      "value": 0.01
+    },
+    {
+      "name": "workAmountIncreaseMultiplier",
+      "type": "number",
+      "value": 1.1
+    },
+    {
+      "name": "autoCost",
+      "type": "number",
+      "value": 10
+    },
+    {
+      "name": "autoCostMultiplier",
+      "type": "number",
+      "value": 1.5
+    },
+    {
+      "name": "upgradeUpgradeCost",
+      "type": "number",
+      "value": 100
+    },
+    {
+      "name": "upgradeIncreaseAmount",
+      "type": "number",
+      "value": 0.01
+    },
+    {
+      "name": "upgradeupgradeMultiplierMultiplier",
+      "type": "number",
+      "value": 1.1
+    }
+  ],
+  "events": [
+    {
+      "name": "IncreaseMoney",
+      "type": "General",
+      "properties": []
+    },
+    {
+      "name": "UpgradeEvent",
+      "type": "General",
+      "properties": [
+        {
+          "name": "UpgradeAmount",
+          "type": "number",
+          "value": 0.01
+        }
+      ]
+    },
+    {
+      "name": "Upgrade2Event",
+      "type": "General",
+      "properties": []
+    },
+    {
+      "name": "AutoEvent",
+      "type": "General",
+      "properties": []
+    }
+  ],
+  "inputs": [
+    {
+      "name": "TotalMoney",
+      "type": "number",
+      "value": "0"
+    },
+    {
+      "name": "WorkAmount",
+      "type": "number",
+      "value": "0.01"
+    },
+    {
+      "name": "WorkAmountUpgrade",
+      "type": "number",
+      "value": "0.01"
+    },
+    {
+      "name": "UpgradeCost",
+      "type": "number",
+      "value": "1"
+    },
+    {
+      "name": "AutoCost",
+      "type": "number",
+      "value": "10"
+    },
+    {
+      "name": "UpgradeAvailable",
+      "type": "boolean",
+      "value": "false"
+    },
+    {
+      "name": "Upgrade2Available",
+      "type": "boolean",
+      "value": "false"
+    },
+    {
+      "name": "AutoAvailable",
+      "type": "boolean",
+      "value": "false"
+    }
+  ]
+}
