@@ -28,7 +28,7 @@
     {
       "name": "workAmountIncrease",
       "type": "number",
-      "value": 1.1
+      "value": 0.01
     },
     {
       "name": "workAmountIncreaseMultiplier",
@@ -146,7 +146,7 @@
               "decimals": 2
             },
             {
-              "action": "multiply",
+              "action": "add",
               "target": "workAmount",
               "source": "workAmountIncrease"
             },
@@ -178,7 +178,7 @@
             {
               "action": "setTextRunValue",
               "targetName": "UpgradeAmountTextField",
-              "formatString": "x$${workAmountIncrease} ($${upgradeCost})"
+              "formatString": "+$${workAmountIncrease} ($${upgradeCost})"
             },
             {
               "action": "callFunction",
