@@ -70,7 +70,32 @@
     {
       "name": "IncreaseMoney",
       "type": "General",
-      "properties": []
+      "properties": [],
+      "logic": [
+        {
+          "action": "add",
+          "target": "totalMoney",
+          "source": "workAmount"
+        },
+        {
+          "action": "round",
+          "target": "totalMoney",
+          "decimals": 2
+        },
+        {
+          "action": "updateRiveInput",
+          "inputName": "TotalMoney",
+          "variableName": "totalMoney"
+        },
+        {
+          "action": "callFunction",
+          "functionName": "updateMoneyDisplay"
+        },
+        {
+          "action": "callFunction",
+          "functionName": "updateUpgradeAvailability"
+        }
+      ]
     },
     {
       "name": "UpgradeEvent",
@@ -81,17 +106,156 @@
           "type": "number",
           "value": 0.01
         }
+      ],
+      "logic": [
+        {
+          "action": "conditional",
+          "conditionType": "greaterOrEqual",
+          "leftVariable": "totalMoney",
+          "rightVariable": "upgradeCost",
+          "trueLogic": [
+            {
+              "action": "subtract",
+              "target": "totalMoney",
+              "source": "upgradeCost"
+            },
+            {
+              "action": "multiply",
+              "target": "upgradeCost",
+              "factor": 1.05
+            },
+            {
+              "action": "round",
+              "target": "upgradeCost",
+              "decimals": 2
+            },
+            {
+              "action": "add",
+              "target": "workAmount",
+              "source": "workAmountIncrease"
+            },
+            {
+              "action": "round",
+              "target": "workAmount",
+              "decimals": 2
+            },
+            {
+              "action": "updateRiveInput",
+              "inputName": "TotalMoney",
+              "variableName": "totalMoney"
+            },
+            {
+              "action": "updateRiveInput",
+              "inputName": "UpgradeCost",
+              "variableName": "upgradeCost"
+            },
+            {
+              "action": "updateRiveInput",
+              "inputName": "WorkAmount",
+              "variableName": "workAmount"
+            },
+            {
+              "action": "setTextRunValue",
+              "targetName": "WorkAmountTextField",
+              "formatString": "$${value}",
+              "variableName": "workAmount"
+            },
+            {
+              "action": "callFunction",
+              "functionName": "updateMoneyDisplay"
+            },
+            {
+              "action": "callFunction",
+              "functionName": "updateUpgradeAvailability"
+            }
+          ]
+        }
       ]
     },
     {
       "name": "Upgrade2Event",
       "type": "General",
-      "properties": []
+      "properties": [],
+      "logic": [
+        {
+          "action": "conditional",
+          "conditionType": "greaterOrEqual",
+          "leftVariable": "totalMoney",
+          "rightVariable": "upgradeUpgradeCost",
+          "trueLogic": [
+            {
+              "action": "subtract",
+              "target": "totalMoney",
+              "source": "upgradeUpgradeCost"
+            },
+            {
+              "action": "add",
+              "target": "workAmountIncrease",
+              "source": "upgradeIncreaseAmount"
+            },
+            {
+              "action": "multiply",
+              "target": "upgradeUpgradeCost",
+              "factor": 1.1
+            },
+            {
+              "action": "round",
+              "target": "upgradeUpgradeCost",
+              "decimals": 2
+            },
+            {
+              "action": "callFunction",
+              "functionName": "updateMoneyDisplay"
+            },
+            {
+              "action": "callFunction",
+              "functionName": "updateUpgradeAvailability"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "AutoEvent",
       "type": "General",
-      "properties": []
+      "properties": [],
+      "logic": [
+        {
+          "action": "conditional",
+          "conditionType": "greaterOrEqual",
+          "leftVariable": "totalMoney",
+          "rightVariable": "autoCost",
+          "trueLogic": [
+            {
+              "action": "subtract",
+              "target": "totalMoney",
+              "source": "autoCost"
+            },
+            {
+              "action": "callFunction",
+              "functionName": "startAutoClicker"
+            },
+            {
+              "action": "multiply",
+              "target": "autoCost",
+              "factor": 1.5
+            },
+            {
+              "action": "round",
+              "target": "autoCost",
+              "decimals": 2
+            },
+            {
+              "action": "callFunction",
+              "functionName": "updateMoneyDisplay"
+            },
+            {
+              "action": "callFunction",
+              "functionName": "updateUpgradeAvailability"
+            }
+          ]
+        }
+      ]
     }
   ],
   "inputs": [
