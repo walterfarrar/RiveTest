@@ -157,14 +157,12 @@
             {
               "action": "setTextRunValue",
               "targetName": "WorkAmountTextField",
-              "formatString": "$${value}",
-              "variableName": "workAmount"
+              "formatString": "$${workAmount}"
             },
             {
               "action": "setTextRunValue",
               "targetName": "UpgradeAmountTextField",
-              "formatString": "$${value}",
-              "variableName": "workAmountIncrease"
+              "formatString": "$${workAmountIncrease} ($${upgradeCost})"
             },
             {
               "action": "callFunction",
