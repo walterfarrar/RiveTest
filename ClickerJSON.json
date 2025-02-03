@@ -3,7 +3,7 @@
     {
       "name": "totalMoney",
       "type": "number",
-      "value": 100
+      "value": 1000
     },
     {
       "name": "autoClickMultiplier",
