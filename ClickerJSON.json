@@ -85,7 +85,7 @@
         {
           "action": "setTextRunValue",
           "targetName": "UpgradeAmount2TextField",
-          "formatString": "+$${workAmountIncrease} ($${upgradeUpgradeCost})"
+          "formatString": "+$${upgradeIncreaseAmount} ($${upgradeUpgradeCost})"
         },
         {
           "action": "setTextRunValue",
@@ -240,8 +240,13 @@
             },
             {
               "action": "setTextRunValue",
-              "targetName": "UpgradeAmount2TextField",
+              "targetName": "UpgradeAmountTextField",
               "formatString": "+$${workAmountIncrease} ($${upgradeUpgradeCost})"
+            },
+            {
+              "action": "setTextRunValue",
+              "targetName": "UpgradeAmount2TextField",
+              "formatString": "+$${upgradeIncreaseAmount} ($${upgradeUpgradeCost})"
             },
             {
               "action": "callFunction",
