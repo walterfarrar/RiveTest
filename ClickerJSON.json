@@ -81,7 +81,7 @@
           "action": "setTextRunValue",
           "targetName": "UpgradeAmountTextField",
           "formatString": "+$${workAmountIncrease} ($${upgradeCost})"
-        }.
+        },
         {
           "action": "setTextRunValue",
           "targetName": "UpgradeAmount2TextField",
