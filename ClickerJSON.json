@@ -229,6 +229,11 @@
               "decimals": 2
             },
             {
+              "action": "setTextRunValue",
+              "targetName": "UpgradeAmount2TextField",
+              "formatString": "Auto ($${autoCost})"
+            },
+            {
               "action": "callFunction",
               "functionName": "updateMoneyDisplay"
             },
