@@ -298,70 +298,9 @@
                     }
                   ]
                 }
-              ],
-              "falseLogic": [
-                {
-                  "action": "clearInterval",
-                  "intervalIdVariable": "autoClickInterval"
-                },
-                {
-                  "action": "conditional",
-                  "conditionType": "greaterThan",
-                  "leftVariable": "autoTickInterval",
-                  "rightValue": 50,
-                  "trueLogic": [
-                    {
-                      "action": "multiply",
-                      "target": "autoTickInterval",
-                      "factor": 0.75
-                    },
-                    {
-                      "action": "round",
-                      "target": "autoTickInterval",
-                      "decimals": 0
-                    }
-                  ],
-                  "falseLogic": [
-                    {
-                      "action": "multiply",
-                      "target": "autoClickMultiplier",
-                      "factor": 1.25
-                    }
-                  ]
-                },
-                {
-                  "action": "startInterval",
-                  "intervalVariable": "autoTickInterval",
-                  "intervalIdVariable": "autoClickInterval",
-                  "actions": [
-                    {
-                      "action": "add",
-                      "target": "totalMoney",
-                      "source": "workAmount",
-                      "multiplier": "autoClickMultiplier"
-                    },
-                    {
-                      "action": "round",
-                      "target": "totalMoney",
-                      "decimals": 2
-                    },
-                    {
-                      "action": "updateRiveInput",
-                      "inputName": "TotalMoney",
-                      "variableName": "totalMoney"
-                    },
-                    {
-                      "action": "callFunction",
-                      "functionName": "updateMoneyDisplay"
-                    },
-                    {
-                      "action": "callFunction",
-                      "functionName": "updateUpgradeAvailability"
-                    }
-                  ]
-                }
               ]
-            },
+            }
+            ,
             {
               "action": "multiply",
               "target": "autoCost",
