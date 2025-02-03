@@ -293,45 +293,61 @@
             },
             {
               "action": "conditional",
-              "conditionType": "equal",
-              "leftVariable": "isAutoClicking",
-              "rightValue": false,
+              "conditionType": "greaterThan",
+              "leftVariable": "autoTickInterval",
+              "rightValue": 500,
               "trueLogic": [
                 {
-                  "action": "setVariable",
-                  "target": "isAutoClicking",
-                  "value": true
+                  "action": "multiply",
+                  "target": "autoTickInterval",
+                  "factor": 0.8
                 },
                 {
-                  "action": "startInterval",
-                  "intervalVariable": "autoTickInterval",
-                  "intervalIdVariable": "autoClickInterval",
-                  "actions": [
-                    {
-                      "action": "add",
-                      "target": "totalMoney",
-                      "source": "workAmount",
-                      "multiplier": "autoClickMultiplier"
-                    },
-                    {
-                      "action": "round",
-                      "target": "totalMoney",
-                      "decimals": 2
-                    },
-                    {
-                      "action": "updateRiveInput",
-                      "inputName": "TotalMoney",
-                      "variableName": "totalMoney"
-                    },
-                    {
-                      "action": "callFunction",
-                      "functionName": "updateMoneyDisplay"
-                    },
-                    {
-                      "action": "callFunction",
-                      "functionName": "updateUpgradeAvailability"
-                    }
-                  ]
+                  "action": "round",
+                  "target": "autoTickInterval",
+                  "decimals": 0
+                }
+              ],
+              "falseLogic": [
+                {
+                  "action": "multiply",
+                  "target": "autoClickMultiplier",
+                  "factor": 1.2
+                }
+              ]
+            },
+            {
+              "action": "clearInterval",
+              "intervalIdVariable": "autoClickInterval"
+            },
+            {
+              "action": "startInterval",
+              "intervalVariable": "autoTickInterval",
+              "intervalIdVariable": "autoClickInterval",
+              "actions": [
+                {
+                  "action": "add",
+                  "target": "totalMoney",
+                  "source": "workAmount",
+                  "multiplier": "autoClickMultiplier"
+                },
+                {
+                  "action": "round",
+                  "target": "totalMoney",
+                  "decimals": 2
+                },
+                {
+                  "action": "updateRiveInput",
+                  "inputName": "TotalMoney",
+                  "variableName": "totalMoney"
+                },
+                {
+                  "action": "callFunction",
+                  "functionName": "updateMoneyDisplay"
+                },
+                {
+                  "action": "callFunction",
+                  "functionName": "updateUpgradeAvailability"
                 }
               ]
             },
