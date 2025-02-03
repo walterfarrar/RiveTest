@@ -304,6 +304,11 @@
                       "variableName": "totalMoney"
                     },
                     {
+                      "action": "setTextRunValue",
+                      "targetName": "AutoTextField",
+                      "formatString": "Auto ($${autoCost})"
+                    },
+                    {
                       "action": "callFunction",
                       "functionName": "updateMoneyDisplay"
                     },
