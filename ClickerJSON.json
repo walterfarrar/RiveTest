@@ -31,11 +31,6 @@
       "value": 0.01
     },
     {
-      "name": "workAmountIncreaseMultiplier",
-      "type": "number",
-      "value": 1.1
-    },
-    {
       "name": "autoCost",
       "type": "number",
       "value": 10
