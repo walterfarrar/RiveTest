@@ -277,6 +277,11 @@
               "source": "autoCost"
             },
             {
+              "action": "setTextRunValue",
+              "targetName": "AutoTextField",
+              "formatString": "Auto ($${autoCost})"
+            },
+            {
               "action": "conditional",
               "conditionType": "equal",
               "leftVariable": "isAutoClicking",
@@ -307,11 +312,6 @@
                       "action": "updateRiveInput",
                       "inputName": "TotalMoney",
                       "variableName": "totalMoney"
-                    },
-                    {
-                      "action": "setTextRunValue",
-                      "targetName": "AutoTextField",
-                      "formatString": "Auto ($${autoCost})"
                     },
                     {
                       "action": "callFunction",
