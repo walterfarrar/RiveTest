@@ -277,6 +277,16 @@
               "source": "autoCost"
             },
             {
+              "action": "multiply",
+              "target": "autoCost",
+              "factor": 1.5
+            },
+            {
+              "action": "round",
+              "target": "autoCost",
+              "decimals": 2
+            },
+            {
               "action": "setTextRunValue",
               "targetName": "AutoTextField",
               "formatString": "Auto ($${autoCost})"
@@ -324,17 +334,6 @@
                   ]
                 }
               ]
-            }
-            ,
-            {
-              "action": "multiply",
-              "target": "autoCost",
-              "factor": 1.5
-            },
-            {
-              "action": "round",
-              "target": "autoCost",
-              "decimals": 2
             },
             {
               "action": "callFunction",
