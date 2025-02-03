@@ -75,22 +75,22 @@
         {
           "action": "setTextRunValue",
           "targetName": "MoneyTextField",
-          "formatString": "$${totalMoney}"
+          "formatString": "$${totalMoney:money}"
         },
         {
           "action": "setTextRunValue",
           "targetName": "UpgradeAmountTextField",
-          "formatString": "+$${workAmountIncrease} ($${upgradeCost})"
+          "formatString": "+$${workAmountIncrease:money} ($${upgradeCost:money})"
         },
         {
           "action": "setTextRunValue",
           "targetName": "UpgradeAmount2TextField",
-          "formatString": "+$${upgradeIncreaseAmount} ($${upgradeUpgradeCost})"
+          "formatString": "+$${upgradeIncreaseAmount:money} ($${upgradeUpgradeCost:money})"
         },
         {
           "action": "setTextRunValue",
           "targetName": "AutoTextField",
-          "formatString": "Auto ($${autoCost})"
+          "formatString": "Auto ($${autoCost:money})"
         },
         {
           "action": "callFunction",
@@ -188,12 +188,12 @@
             {
               "action": "setTextRunValue",
               "targetName": "WorkAmountTextField",
-              "formatString": "$${workAmount}"
+              "formatString": "$${workAmount:money}"
             },
             {
               "action": "setTextRunValue",
               "targetName": "UpgradeAmountTextField",
-              "formatString": "+$${workAmountIncrease} ($${upgradeCost})"
+              "formatString": "+$${workAmountIncrease:money} ($${upgradeCost:money})"
             },
             {
               "action": "callFunction",
@@ -241,12 +241,12 @@
             {
               "action": "setTextRunValue",
               "targetName": "UpgradeAmountTextField",
-              "formatString": "+$${workAmountIncrease} ($${upgradeCost})"
+              "formatString": "+$${workAmountIncrease:money} ($${upgradeCost:money})"
             },
             {
               "action": "setTextRunValue",
               "targetName": "UpgradeAmount2TextField",
-              "formatString": "+$${upgradeIncreaseAmount} ($${upgradeUpgradeCost})"
+              "formatString": "+$${upgradeIncreaseAmount:money} ($${upgradeUpgradeCost:money})"
             },
             {
               "action": "callFunction",
@@ -289,7 +289,7 @@
             {
               "action": "setTextRunValue",
               "targetName": "AutoTextField",
-              "formatString": "Auto ($${autoCost})"
+              "formatString": "Auto ($${autoCost:money})"
             },
             {
               "action": "conditional",
