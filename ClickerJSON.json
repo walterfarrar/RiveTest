@@ -295,7 +295,7 @@
               "action": "conditional",
               "conditionType": "greaterThan",
               "leftVariable": "autoTickInterval",
-              "rightValue": 500,
+              "rightValue": 100,
               "trueLogic": [
                 {
                   "action": "multiply",
